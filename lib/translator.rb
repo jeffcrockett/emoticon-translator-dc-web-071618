@@ -30,10 +30,10 @@ end
 def get_english_meaning(file_path, emoticon)
   hash = load_library(file_path)
   hash.each do |key, value_hash|
-    if key == "get_emoticon"
-      value_hash.each do |english, japanese|
+    if key == "get_meaning"
+      value_hash.each do |japanese, meaning|
         if japanese == emoticon
-          return english
+          return meaning
         end
       end
     end
