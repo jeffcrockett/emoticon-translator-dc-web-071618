@@ -5,7 +5,7 @@ require 'pry'
 def load_library(file_path)
   hash = {"get_meaning": {}, "get_emoticon": {}}
   emoticons = YAML.load_file(file_path)
-  binding.pry
+  # binding.pry
   emoticons.each do |desc, array|
     hash["get_meaning"][array[1]] = array[0]
     hash["get_emoticon"][array[0]] = array[1]
