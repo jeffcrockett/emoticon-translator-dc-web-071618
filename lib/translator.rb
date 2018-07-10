@@ -27,7 +27,7 @@ def get_japanese_emoticon(file_path, emoticon)
   "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(file_path, emoticon)
   hash = load_library(file_path)
   hash.each do |key, value_hash|
     if key == "get_emoticon"
