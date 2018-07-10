@@ -3,7 +3,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(file_path)
-  hash = {"get_meaning": {}, "get_emoticon": {}}
+  hash = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons = YAML.load_file(file_path)
   # binding.pry
   emoticons.each do |desc, array|
